@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.presentacion {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  max-width: 100%; /* Ajusta el ancho máximo */
+  text-align: center; /* Centra el texto */
+  padding: 10px; /* Añade un poco de espacio interior */
+  word-wrap: break-word; /* Permite la ruptura de palabras largas */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1519326844852-704caea5679e?q=80&w=1567&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo a {
+  color: #bebebe;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  transition: all 0.5s;
+  color: #ff0000;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100px; /* Ajusta según sea necesario */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header .abajo {
+  background-color: wheat;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  gap: 40px;
+}
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav li a:hover {
+  transition: all 0.5s;
+  color: #ff0000;
+}
+/* arranco a hacer las card para meter mi producto */
+.text-body {
+  color: rgb(134, 134, 134);
+}
+.group {
+  /* iniciar sesion y registrar */
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.group a {
+  font-weight: 600;
+  list-style: none;
+  text-decoration: none;
+  width: 130px;
+  height: 35px;
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: #000000;
+  background-color: #e34242;
+}
+
+.group a:hover {
+  transition: all 0.5s;
+  color: #ffffff;
+}
+.redes {
+  /* footer redes sociales */
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  transition: all 0.3s ease-in-out;
+}
+
+.redes a svg {
+  width: 30px;
+  fill: #ffffff;
+}
+
+.redes .discord {
+  background-color: rgb(0, 60, 255);
+}
+
+.redes .github {
+  background-color: rgb(24, 22, 22);
+}
+
+.redes .twitter {
+  background-color: #33bbff;
+}
+
+.redes .instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+}
+
+.redes a:hover {
+  width: 90px;
+}
+/* footer redes sociales */
+.footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  top: 350px;
+  width: 100%;
+}
+.scrolldown {
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: absolute;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  border: calc(var(--sizeX) / 10) solid red;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  cursor: pointer;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: red;
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #990000;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
